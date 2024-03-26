@@ -1,0 +1,17 @@
+# Intellij
+.vscode
+.idea
+*.iml
+
+# git hooks
+.husky
+
+# Node
+node_modules
+yarn-error.log*
+
+# Testing
+coverage
+
+# build
+dist

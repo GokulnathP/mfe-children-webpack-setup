@@ -1,0 +1,36 @@
+{
+  "rootDir": "../",
+  "testEnvironment": "jsdom",
+  "transform": {
+    "\\.(gql|graphql)$": "@graphql-tools/jest-transform",
+    ".*": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "\\.(css|less|scss|sss|styl)$": "<rootDir>/node_modules/jest-css-modules"
+  },
+  "snapshotSerializers": ["@emotion/jest/serializer"],
+  "setupFilesAfterEnv": ["./src/setupTests.ts"],
+  "roots": ["./src"],
+  "resetMocks": true,
+  "watchPlugins": ["jest-watch-typeahead/filename", "jest-watch-typeahead/testname"],
+  "coverageReporters": [
+    "cobertura",
+    "json",
+    "json-summary",
+    "lcov",
+    "text"
+  ],
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx,ts,tsx}",
+    "!src/setupTests.ts",
+    "!src/index.tsx"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "statements": 90,
+      "branches": 90,
+      "functions": 90,
+      "lines": 90
+    }
+  }
+}
